@@ -1,7 +1,7 @@
 LEX = lex 
 YACC = yacc -d 
 
-CC = CC
+CC = gcc -std=c99 -w
 
 struct: y.tab.o lex.yy.o functions.o
 	$(CC) -o $@ y.tab.o lex.yy.o functions.o
